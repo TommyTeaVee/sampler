@@ -32,7 +32,7 @@ android {
     }
     externalNativeBuild {
         cmake {
-            setPath(File("$projectDir/CMakeLists.txt"))
+            path(File("$projectDir/CMakeLists.txt"))
         }
     }
     ndkVersion = Const.ndkVersion
@@ -54,13 +54,13 @@ android {
 val ktlint by configurations.creating
 
 dependencies {
-    implementation(kotlin("stdlib-jdk7", KotlinCompilerVersion.VERSION))
-    implementation("androidx.appcompat:appcompat:1.1.0")
-    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10")
+    implementation("androidx.appcompat:appcompat:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.2")
 
     // KtLint - Static code analysis
     // https://proandroiddev.com/kotlin-static-analysis-why-and-how-a12042e34a98
-    ktlint("com.pinterest:ktlint:0.35.0")
+    ktlint("com.pinterest:ktlint:0.43.2")
 }
 
 // KtLint - Static code analysis

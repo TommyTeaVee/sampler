@@ -64,7 +64,7 @@ class SquaresView @JvmOverloads constructor(
      */
     private val backgroundRect = Rect()
 
-    private val squareBackgroundColor: Int
+    private val squareBackgroundColor: Int = ContextCompat.getColor(context, R.color.roll_pad_square_background)
 
     private val squareBackgroundPaint: Paint
     private val squareStrokeBackgroundActivePaint: Paint
@@ -86,7 +86,6 @@ class SquaresView @JvmOverloads constructor(
     private val tempRect = RectF()
 
     init {
-        squareBackgroundColor = ContextCompat.getColor(context, R.color.roll_pad_square_background)
         squareActiveAccentColor = ContextCompat.getColor(context, R.color.primary_color_deck_A)
         squareInactiveAccentColor = ContextCompat.getColor(context, R.color.roll_pad_square_accent_inactive)
 
@@ -373,7 +372,7 @@ class SquaresView @JvmOverloads constructor(
     companion object {
 
         internal const val NB_LINE = 4
-        internal const val NB_COLUMN = 4
+        internal const val NB_COLUMN = 3
 
         /**
          * The default typo
