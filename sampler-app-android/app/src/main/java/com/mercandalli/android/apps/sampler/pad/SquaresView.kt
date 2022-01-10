@@ -371,8 +371,8 @@ class SquaresView @JvmOverloads constructor(
 
     companion object {
 
-        internal const val NB_LINE = 4
-        internal const val NB_COLUMN = 3
+        internal const val NB_LINE = 4 // number of Rows of beat pads to commit
+        internal const val NB_COLUMN = 3 // Number of Decks for the Beat Pads
 
         /**
          * The default typo
